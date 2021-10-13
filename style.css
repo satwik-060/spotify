@@ -42,8 +42,9 @@
   .background {
       background : white url('resources/bg.jpg') no-repeat;
     border-radius : 10px;
-    display : block;
-    /* margin : 5px auto; */
+    display : flex;
+    flex-direction : column;
+    align-items : flex-start;
     align-self: center;
     width : 75vw;
     color : white;
@@ -80,4 +81,34 @@
     list-style-type: none;
     display : flex;
     justify-content:center;
+
+}
+.songcontainer {
+    /* border : 2px solid red; */
+    width : 50%;
+    margin : auto, 0px;
+    
+}
+.song{
+    display : flex;
+    align-items : center;
+    justify-content: space-between;
+    margin : 10px;
+    background : rgba(207, 205, 205, 0.4) ;
+    color : black;
+    border-radius : 25px;
+    padding : 10px;
+    box-sizing: border-box;
+}
+.songimg{
+    width : 30px;
+    height : 30px;
+    border-radius: 30px;
+}
+.songplay{
+    width : 10px;
+    margin-left : 20px;
+}
+#heading{
+    text-align : center;
 }
