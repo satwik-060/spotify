@@ -32,9 +32,14 @@
             alt="no image"
             class="songimg"
           />
-          <h5>Alexander Ryback - [Fairy Tale]</h5>
+          <h5 class="songName">Alexander Ryback - [Fairy Tale]</h5>
           <h5>
-            05:34 <img src="resources/play.svg" alt="play" class="songplay" />
+            03:02
+            <img
+              src="resources/play.svg"
+              alt="play"
+              class="songplay" id="0"
+            />
           </h5>
         </div>
         <div class="song">
@@ -43,9 +48,9 @@
             alt="no image"
             class="songimg"
           />
-          <h5>Lewis Capaldi - [Someone You Loved]</h5>
+          <h5 class="songName">Lewis Capaldi - [Someone You Loved]</h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            03:02<img src="resources/play.svg" alt="play" class="songplay" id="1" />
           </h5>
         </div>
         <div class="song">
@@ -54,9 +59,9 @@
             alt="no image"
             class="songimg"
           />
-          <h5>Lindsey Stirling - [Carol Of Bells]</h5>
+          <h5 class="songName">Lindsey Stirling - [Carol Of Bells]</h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            03:06<img src="resources/play.svg" alt="play" class="songplay" id="2" />
           </h5>
         </div>
         <div class="song">
@@ -65,9 +70,9 @@
             alt="no image"
             class="songimg"
           />
-          <h5>Attack on Titan - [Sasageyo]</h5>
+          <h5 class="songName">Attack on Titan - [Sasageyo]</h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            05:41<img src="resources/play.svg" alt="play" class="songplay" id="3" />
           </h5>
         </div>
         <div class="song">
@@ -76,9 +81,9 @@
             alt="no image"
             class="songimg"
           />
-          <h5>NF - [The Search]</h5>
+          <h5 class="songName">NF - [The Search]</h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            03:15<img src="resources/play.svg" alt="play" class="songplay" id="4" />
           </h5>
         </div>
         <div class="song">
@@ -87,9 +92,11 @@
             alt="no image"
             class="songimg"
           />
-          <h5>Shawn Mendes - [There's Nothing Holding Me Back]</h5>
+          <h5 class="songName">
+            Shawn Mendes - [There's Nothing Holding Me Back]
+          </h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            03:19<img src="resources/play.svg" alt="play" class="songplay" id="5" />
           </h5>
         </div>
         <div class="song">
@@ -98,9 +105,9 @@
             alt="no image"
             class="songimg"
           />
-          <h5>Demon Slayer - [Tanjiro Vs Rui]</h5>
+          <h5 class="songName">Demon Slayer - [Tanjiro Vs Rui]</h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            05:25<img src="resources/play.svg" alt="play" class="songplay" id="6" />
           </h5>
         </div>
         <div class="song">
@@ -109,9 +116,9 @@
             alt="no image"
             class="songimg"
           />
-          <h5>The Script - [Hall Of Fame]</h5>
+          <h5 class="songName">The Script - [Hall Of Fame]</h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            03:20<img src="resources/play.svg" alt="play" class="songplay" id="7" />
           </h5>
         </div>
         <div class="song">
@@ -120,9 +127,9 @@
             alt="no image"
             class="songimg"
           />
-          <h5>The Weekend - [Blinding Lights]</h5>
+          <h5 class="songName">The Weekend - [Blinding Lights]</h5>
           <h5>
-            05:34<img src="resources/play.svg" alt="play" class="songplay" />
+            03:19<img src="resources/play.svg" alt="play" class="songplay" id="8" />
           </h5>
         </div>
         <div class="song">
@@ -131,20 +138,32 @@
             alt="no image"
             class="songimg"
           />
-          <h5>Tokyo Ghoul - [Unravel]</h5>
+          <h5 class="songName">Tokyo Ghoul - [Unravel]</h5>
           <h5>
-            05:34   <img src="resources/play.svg" alt="play" class="songplay" />
+            04:02 <img src="resources/play.svg" alt="play" class="songplay" id="9" />
           </h5>
         </div>
       </div>
     </div>
     <div class="songplayer">
-      <input type="range" name="range" id="myProgressBar" min="0" max="100" />
+      <input
+        type="range"
+        name="range"
+        id="myProgressBar"
+        min="0"
+        value="0"
+        max="100"
+      />
       <ul>
-        <li><img src="resources/previous.svg" alt="previous" /></li>
-        <li><img src="resources/play.svg" alt="player" /></li>
-        <li><img src="resources/next.svg" alt="next" /></li>
+        <li><img src="resources/previous.svg" alt="previous" id="previoussong" /></li>
+        <li><img src="resources/play.svg" alt="player" id="masterplay" /></li>
+        <li><img src="resources/next.svg" alt="next" id = "nextsong" /></li>
       </ul>
+      <div class="name">
+        <h5 id="masterSongName">Alexander Ryback - [Fairy Tale]</h5>
+        <img src="resources/playing.gif" alt="no gif" id="gif" />
+      </div>
     </div>
+    <script src="javascript.js"></script>
   </body>
 </html>

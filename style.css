@@ -55,17 +55,20 @@
 .songplayer {
     background:black;
     position : sticky;
+    bottom : 0;
     /* margin-top: 71px; */
+    color : white;
     padding : 15px;
-    height : 100px;
+    height : 120px;
     display : flex;
     flex-direction : column;
+    align-items :center;
 }
 .songplayer input[type="range"]{
     width : 90%;
-    height : 5px;
+    height : 2px;
     display : block;
-    margin : auto;
+    margin : 15px auto;
 }
 .songplayer ul li img{
     margin : 0px 30px;
@@ -87,7 +90,7 @@
     /* border : 2px solid red; */
     width : 50%;
     margin : auto, 0px;
-    
+    overflow : auto;
 }
 .song{
     display : flex;
@@ -97,7 +100,7 @@
     background : rgba(207, 205, 205, 0.4) ;
     color : black;
     border-radius : 25px;
-    padding : 10px;
+    padding : 7px;
     box-sizing: border-box;
 }
 .songimg{
@@ -105,10 +108,25 @@
     height : 30px;
     border-radius: 30px;
 }
+.song img{  
+    cursor : pointer;
+}
 .songplay{
     width : 10px;
     margin-left : 20px;
 }
 #heading{
     text-align : center;
+}
+.name {
+    display : flex;
+    flex-direction: column;
+    align-items : center;
+}
+#gif{
+    opacity : 0;
+    transition : opacity 0.3s ease-in-out;
+}
+.name img{
+     width : 50px;   
 }
