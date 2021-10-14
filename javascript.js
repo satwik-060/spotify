@@ -66,40 +66,24 @@ songItems.forEach((element,i) => {
   element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
 })
 
-//Handling play/pause click
-masterplay.addEventListener("click",()=>{
-    if(audioElement.paused || audioElement.currentTime<=0){
-        audioElement.play();
-        masterplay.src = "resources/pause.svg";
-        gif.style.opacity = "1";
-    }
-    else
-    {
-        audioElement.pause();
-        masterplay.src = "resources/play.svg";
-        gif.style.opacity = "0";
-    }
-    
-})
-//Handled play/pause click 
 
 //managing playing bar
 audioElement.addEventListener('timeupdate',()=>{
-    let progress = 0 ;
+  let progress = 0 ;
     progress = parseInt((audioElement.currentTime/audioElement.duration)* 100);
     myProgressBar.value= progress;
     // myProgressBar.style.transition = "0.1s";
-});
-
-myProgressBar.addEventListener('change',()=>{
+  });
+  
+  myProgressBar.addEventListener('change',()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
-})
-//managed playing bar
-
-//making every song play and pause button
-function makeAllPlays(){
+  })
+  //managed playing bar
+  
+  //making every song play and pause button
+  function makeAllPlays(){
   Array.from(document.getElementsByClassName('songplay')).forEach((element)=>{
-      element.src = "resources/play.svg";  
+    element.src = "resources/play.svg";  
   })
 }
 Array.from(document.getElementsByClassName('songplay')).forEach((element)=>{
@@ -123,6 +107,26 @@ Array.from(document.getElementsByClassName('songplay')).forEach((element)=>{
     }
   })
 })
+
+//Handling play/pause click
+masterplay.addEventListener("click",()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+        audioElement.play();
+        masterplay.src = "resources/pause.svg";
+        document.getElementsByClassName("songplay")[songIndex].src = "resources/pause.svg";
+        gif.style.opacity = "1";
+    }
+    else
+    {
+        audioElement.pause();
+        masterplay.src = "resources/play.svg";
+        document.getElementsByClassName("songplay")[songIndex].src = "resources/play.svg";
+        gif.style.opacity = "0";
+    }
+    
+})
+//Handled play/pause click 
+
 //made every song play and pause button 
 
 //making next and previous buttons 
@@ -133,8 +137,11 @@ document.getElementById('nextsong').addEventListener('click',()=>{
   }
   else
   {
+    // element.src = "resources/pause.svg";
     songIndex+=1;
   }
+  makeAllPlays();
+  document.getElementsByClassName("songplay")[songIndex].src = "resources/pause.svg";
   audioElement.src = songs[songIndex].filePath;
   masterSongName.innerText = songs[songIndex].songName;
   audioElement.currentTime = 0;
@@ -150,6 +157,8 @@ document.getElementById('previoussong').addEventListener('click',()=>{
   {
     songIndex-=1;
   }
+  makeAllPlays();
+  document.getElementsByClassName("songplay")[songIndex].src = "resources/pause.svg";
   audioElement.src = songs[songIndex].filePath;
   masterSongName.innerText = songs[songIndex].songName;
   audioElement.currentTime = 0;
